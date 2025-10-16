@@ -1,0 +1,28 @@
+@import '../../../styles/variable';
+
+.hero {
+  background-color: $white-color;
+  padding: 70px var(--wrapspace);
+
+  .container {
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+
+    @media (max-width: 1024px) {
+      gap: 3rem;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      gap: 2rem;
+    }
+  }
+
+}

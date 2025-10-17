@@ -14,6 +14,10 @@ import founder6 from "./Guru/founder6.png";
 import founder7 from "./Guru/founder7.png";
 import founder8 from "./Guru/founder8.png";
 import founder9 from "./Guru/founder9.png";
+import balsabha1 from "./events/media.jpg";
+import balsabha2 from "./events/media2.jpg";
+import balsabha3 from "./events/balsabha3.jpg";
+import balsabha4 from "./events/balsabha4.jpg";
 
 const images = {
     Logo,
@@ -31,7 +35,11 @@ const images = {
     founder6,
     founder7,
     founder8,
-    founder9
+    founder9,
+    balsabha1,
+    balsabha2,
+    balsabha3,
+    balsabha4
 }
 
 export default images;

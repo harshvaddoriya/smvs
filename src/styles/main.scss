@@ -1,5 +1,5 @@
-@import "./variable";
-@import "./font";
+@use "./variable" as *;
+@use "./font" as *;
 :root {
   --wrap: 1600px;
   --wrapspace: 30px;

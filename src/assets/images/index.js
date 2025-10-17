@@ -1,5 +1,5 @@
 import Logo from "./Logo.png";
-import Banner from "./header-banner.jpg";
+import Banner from "./header-banner.png";
 import LNDMM from "./organization/LNDMM.jpg";
 import LNDYM from "./organization/LNDYM.jpg";
 import UK from "./organization/UK.jpg";
@@ -22,6 +22,7 @@ import balsabha5 from "./events/balsabha5.jpg";
 import balsabha6 from "./events/balsabha6.jpg";
 import balsabha7 from "./events/balsabha7.jpg";
 import balsabha8 from "./events/balsabha8.jpg";
+import balutsav from "./BalUtsav.png";
 
 const images = {
     Logo,
@@ -47,7 +48,8 @@ const images = {
     balsabha5,
     balsabha6,
     balsabha7,
-    balsabha8
+    balsabha8,
+    balutsav
 }
 
 export default images;

@@ -16,6 +16,7 @@ function Footer() {
         <div className={styles.column}>
           <a href="/" className={styles.link}>
             <img src={Images.Logo} alt="Logo" className={styles.logo} />
+            <h2 className={styles.name}>LNDYM - Bal Vibhag</h2>
           </a>
         </div>
 
@@ -25,7 +26,7 @@ function Footer() {
             <a href="https://www.youtube.com/SwaminarayanVadtalGadiOfficial?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
-            <a href="https://www.instagram.com/Indym_balvibhag/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/lndym_balvibhag/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
             <a href="https://www.facebook.com/swaminarayanvadtalgadi/" target="_blank" rel="noopener noreferrer">

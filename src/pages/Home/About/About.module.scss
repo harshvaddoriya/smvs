@@ -1,0 +1,47 @@
+@import "../../../styles/variable";
+
+
+
+
+.innerContainer {
+  text-align: center;
+  padding: 60px 0px;
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  width: 100%;
+  margin: auto;
+
+  h2 {
+    color: $primary-color;
+    margin: 25px 0px 20px;
+    font-size: 28px;
+    padding-bottom: 10px;
+
+    @media(max-width:1080px){
+        font-size: 22px;
+    }
+
+    @media(max-width:1080px){
+        font-size: 20px;
+    }
+  }
+
+  .firstContent {
+    padding-top: 30px;
+    border-top: 1px solid $primary-color;
+
+    
+
+    P{
+        font-size: 18px;
+        color: $black-color;    
+
+        @media(max-width:1080px){
+            font-size: 16px;
+        }
+
+        @media(max-width:480px){
+            font-size: 14px;
+        }
+    }
+  }
+}

@@ -14,12 +14,18 @@ function Footer() {
       <div className={styles.container}>
 
         <div className={styles.column}>
-          <img src={Images.Logo} alt="Logo" className={styles.logo} />
+          <a href="/" className={styles.link}>
+            <img src={Images.Logo} alt="Logo" className={styles.logo} />
+          </a>
+        </div>
+
+        <div className={styles.column}>
+          <p className={styles.heading}>Connect with SVG</p>
           <div className={styles.socialIcons}>
             <a href="https://www.youtube.com/SwaminarayanVadtalGadiOfficial?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
-            <a href="https://www.instagram.com/swaminarayanvadtalgadi_/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/Indym_balvibhag/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
             <a href="https://www.facebook.com/swaminarayanvadtalgadi/" target="_blank" rel="noopener noreferrer">
@@ -30,8 +36,6 @@ function Footer() {
             </a>
           </div>
         </div>
-
-        <div className={styles.column}></div>
 
         <div className={styles.column}>
           <div className={styles.policyLinks}>

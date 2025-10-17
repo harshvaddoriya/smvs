@@ -2,7 +2,7 @@
   "name": "smvs",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -14,7 +14,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.3",
-    "sass": "^1.89.2",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
     "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
   },

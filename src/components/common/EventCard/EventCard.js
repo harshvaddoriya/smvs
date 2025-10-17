@@ -1,25 +1,22 @@
 "use client";
-import React from "react";
-import "./EventCard.module.scss";
 
-const EventCard = ({ cards }) => {
-  if (!cards || cards.length === 0) return null;
+import React from "react";
+import styles from "./EventCard.module.scss";
+
+export default function EventCard({ image, heading, content, side = "left" }) {
+  const isRight = side === "right";
 
   return (
-    <section className="cardSection">
-      {cards.map((card, index) => (
-        <div className={`card ${index % 2 !== 0 ? "reverse" : ""}`} key={index} style={{ backgroundColor: card.bgColor }}>
-          <div className="card__image">
-            <img src={card.image} alt={card.title} />
-          </div>
-          <div className="card__content">
-            <h2>{card.title}</h2>
-            <p>{card.content}</p>
-          </div>
+    <div className={styles.wrapper}>
+      <div className={`${styles.card} ${isRight ? styles.reverse : ""}`}>
+        <div className={styles.left}>
+          <img src={image} alt={heading} className={styles.image} />
         </div>
-      ))}
-    </section>
+        <div className={styles.right}>
+          <h3>{heading}</h3>
+          <p>{content}</p>
+        </div>
+      </div>
+    </div>
   );
-};
-
-export default EventCard;
+}

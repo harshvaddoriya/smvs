@@ -10,7 +10,7 @@
 .card {
   display: flex;
   gap: 20px;
-  margin: 60px 0;
+  padding: 60px 0;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -28,49 +28,73 @@
 .left {
   width: 50%;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
+  
 
   .image {
-    width: 200px; 
-    height: 200px; 
+    width: 600px;
+    height: 400px;
     object-fit: cover;
     border-radius: 8px;
+    transition: opacity 0.5s ease-in-out; 
   }
 
   @media (max-width: 768px) {
     width: 100%;
     .image {
-      width: 150px;
-      height: 150px;
+      width: 500px;
+      height: 300px;
     }
   }
 }
-
 
 .right {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start; 
   padding-top: 0;
-
+border-bottom: 1px solid #e7dbd1;
   h3 {
-    margin: 0 0 10px;
-    font-size: 20px;
-    color:$primary-color;
+    margin: 10px 0 40px;
+    font-size: 24px;
+    color: $primary-color;
+    font-weight:bolder;
+    border-bottom: 2px solid $primary-color;
   }
 
   p {
     margin: 0;
-    line-height: 16px;
+    line-height: 40px;
     color: #4d1400;
+    font-weight: 600;
   }
 
   @media (max-width: 768px) {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
+
+    h3{
+        margin:10px 0px 20px;
+        font-size: 20px;
+    }
   }
+}
+
+@media(max-width:480px){
+    .wrapper{
+        padding: 0 10px;
+    }
+    .right{
+        border-bottom: none;
+        p{
+            line-height: 30px;
+            font-size: 14px;
+        }
+
+       
+    }
 }

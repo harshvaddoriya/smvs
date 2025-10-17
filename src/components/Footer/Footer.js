@@ -35,8 +35,8 @@ function Footer() {
 
         <div className={styles.column}>
           <div className={styles.policyLinks}>
-            <a href="/terms-and-condition">Terms & Conditions</a>
-            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/legal/terms-and-condition">Terms & Conditions</a>
+            <a href="/legal/privacy-policy">Privacy Policy</a>
           </div>
         </div>
       </div>

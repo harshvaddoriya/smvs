@@ -85,9 +85,10 @@
 
     .founderSection{
         padding: 20px 10px;
-        h2{
-            font-size: 20px;
-        }
+    }
+
+    h2 {
+      font-size: 20px;
     }
 
     .founderCard {
@@ -100,7 +101,8 @@
     }
 
     .description p {
-      font-size: 16px;
+    padding:0 10px;
+      font-size: 14px;
     }
   }
 }

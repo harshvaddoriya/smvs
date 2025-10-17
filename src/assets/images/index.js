@@ -18,6 +18,10 @@ import balsabha1 from "./events/media.jpg";
 import balsabha2 from "./events/media2.jpg";
 import balsabha3 from "./events/balsabha3.jpg";
 import balsabha4 from "./events/balsabha4.jpg";
+import balsabha5 from "./events/balsabha5.jpg";
+import balsabha6 from "./events/balsabha6.jpg";
+import balsabha7 from "./events/balsabha7.jpg";
+import balsabha8 from "./events/balsabha8.jpg";
 
 const images = {
     Logo,
@@ -39,7 +43,11 @@ const images = {
     balsabha1,
     balsabha2,
     balsabha3,
-    balsabha4
+    balsabha4,
+    balsabha5,
+    balsabha6,
+    balsabha7,
+    balsabha8
 }
 
 export default images;

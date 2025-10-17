@@ -1,12 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/index";
+import SocialSidebarIcons from "../components/common/SocialSidebar/SocialSidebarIcons";
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <>
+      <SocialSidebarIcons />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   );
 };
 

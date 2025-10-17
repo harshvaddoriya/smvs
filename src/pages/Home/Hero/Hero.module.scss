@@ -1,28 +1,96 @@
-@import '../../../styles/variable';
+@import "../../../styles/variable";
 
 .hero {
-  background-color: $white-color;
-  padding: 70px var(--wrapspace);
+  width: 100%;
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  margin: auto;
+  padding: 20px;
 
-  .container {
-    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  .videoWrapper {
+    position: relative;
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 5rem;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
 
-    @media (max-width: 1024px) {
-      gap: 3rem;
-      flex-direction: column-reverse;
-      text-align: center;
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
     }
 
-    @media (max-width: 768px) {
-      gap: 2rem;
+    .video.active {
+      opacity: 1;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+
+      span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &.active {
+          background: $primary-color;
+        }
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: $primary-color;
+      cursor: pointer;
+      user-select: none;
+      padding: 5px;
+      z-index: 10;
+
+      &.left {
+        left: 10px;
+      }
+
+      &.right {
+        right: 10px;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    .videoWrapper {
+      height: 400px;
+      .dots span {
+        width: 8px;
+        height: 8px;
+      }
+
+      .arrow {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+    @media (max-width: 768px) {
+    .videoWrapper {
+      height: 300px;}}
 }

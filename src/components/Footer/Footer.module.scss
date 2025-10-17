@@ -1,87 +1,73 @@
+@import "../../styles/variable";
+
 .footer {
-  background-color: #a6896b;
+  background-color: $secondary-color;
   color: #05203c;
-  padding: 50px 20px 30px; 
+  padding: 50px 20px 30px;
+  border-top:5px solid #bebbb3;
 
   .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
     max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
     width: 100%;
     margin: auto;
-    gap: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 5px;
+    padding-bottom: 15px;
   }
 
   .column {
-    h4 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      font-weight: 600;
-
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-
-
-      li {
-        margin-bottom: 10px;
-        font-size: 20px;
-        display: flex;
-        align-items: flex-start;
-
-       
-
-        svg {
-          margin-right: 8px;
-          flex-shrink: 0;
-          margin-top: 2px;
-        }
-
-        a {
-          color: #fff;
-          text-decoration: none;
-          line-height: 28px;
-          font-weight: 300;
-          
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; 
+    min-width: 150px;
 
     .logo {
-      max-width: 140px;
-      margin-bottom: 15px;
+      width: 90px;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 10px;
     }
 
     .socialIcons {
       display: flex;
       gap: 15px;
-
+      margin-top: 10px;
 
       a {
-        color: #fff;
+        color: $white-color;
         font-size: 18px;
-        border:1px solid white;
-        border-radius:20px;
-        padding:10px;
+        border: 1px solid $white-color;
+        border-radius: 50%;
+        padding: 8px;
+        transition: all 0.3s ease;
 
         &:hover {
-          color: #ff4e4e;
-          border:1px solid #ff4e4e;
+          color: $primary-color;
+          border-color: $primary-color;
+        }
+      }
+    }
+
+    .policyLinks {
+      display: flex;
+      gap: 40px;
+      margin-top: 10px;
+      flex-wrap: nowrap;
+
+      a {
+        color: $white-color;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+
+        &:hover {
+          color: $primary-color;
         }
       }
     }
@@ -90,39 +76,14 @@
   .bottom {
     padding-top: 20px;
     text-align: center;
-    font-size: 13px;
-    color: #ccc;
+    font-size: 14px;
+    color: $white-color;
   }
 }
 
-/* =========================
-   Responsive Styles
-========================= */
-
 @media (max-width: 1024px) {
   .footer {
-    padding: 60px 40px 40px; // Increased left/right padding
-
-    .container {
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-
-    .column {
-      flex: 0 0 calc(50% - 20px);
-
-      h4 {
-        font-size: 20px;
-      }
-
-      ul li {
-        font-size: 18px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-    }
+    padding: 60px 40px 40px;
 
     .socialIcons a {
       font-size: 16px;
@@ -134,32 +95,43 @@
   }
 }
 
-@media (max-width: 768px) {
+@media(max-width:768px){
+
   .footer {
-    padding: 60px 30px 40px; 
+    padding: 30px 20px;
+  .container{
+    flex-direction: column;  
+    align-items: center;
+    gap: 20px;
+  }
 
-    .column {
-      flex: 0 0 100%;
-
-      h4 {
-        font-size: 18px;
-      }
-
-      ul li {
-        font-size: 16px;
-      }
-
-      p {
-        font-size: 15px;
-      }
+  .column {
+     flex: unset;
+      width: 100%;
+      align-items: center;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px;
 
     .container {
-      gap: 30px;
+      gap: 0px;
     }
 
-    .socialIcons a {
-      font-size: 16px;
+    .column {
+      width: 100%;
+      align-items: center;
+
+      .policyLinks {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        margin-top: 20px;
+      }
     }
 
     .bottom {
